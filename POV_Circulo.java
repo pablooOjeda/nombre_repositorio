@@ -12,6 +12,13 @@ public class POV_Circulo {
 		this.radio = radio;
 		this.color = color;
 	}
+	
+	public static double area_circulo(POV_Circulo circulo1) {
+		double radio1 = circulo1.getRadio();
+		double area2 = radio1*3.14;
+		System.out.println("Area cuadrado: " +area2);
+		return area2;
+	}
 
 	private int id;
 	private double radio;

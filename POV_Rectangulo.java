@@ -8,6 +8,15 @@ public class POV_Rectangulo {
 		this.ladoB = ladoB;
 		this.color = color;
 	}
+	
+	public static double area_rectangulo(POV_Rectangulo rectangulo1) {
+		double ladoA = rectangulo1.getLadoA();
+		double ladoB = rectangulo1.getLadoB();
+		double area1 = ladoA * ladoB;
+		System.out.println("Area rectangulo: " + area1);
+		return area1;
+	}
+	
 	public int getId() {
 		return id;
 	}

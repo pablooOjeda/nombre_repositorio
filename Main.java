@@ -7,24 +7,32 @@ public class Main {
 		POV_Rectangulo rectangulo1 = new POV_Rectangulo(1, 3, 3, "rojo");
 		
 		
-		double ladoA = rectangulo1.getLadoA();
-		double ladoB = rectangulo1.getLadoB();
-		double area1 = ladoA * ladoB;
-		System.out.println("Area rectangulo: " + area1);
+		double area1 = rectangulo1.area_rectangulo(rectangulo1);
 		
 		
-		double radio1 = circulo1.getRadio();
-		double area2 = radio1*3.14;
-		System.out.println("Area cuadrado: " +area2);
+		double area2 = circulo1.area_circulo(circulo1);
 		
 		
-		double diferencia = area1 -area2;
-		System.out.println("Diferencia areas: " +diferencia);
+		double diferencia = extracted(area1, area2);
 		
 		
+		extracted(circulo1, rectangulo1, diferencia);
+	}
+
+	public static void extracted(POV_Circulo circulo1, POV_Rectangulo rectangulo1, double diferencia) {
 		System.out.println("Rectangulo: " +rectangulo1);
 		System.out.println("Circulo: " +circulo1);
 		System.out.println("Diferencia: " +diferencia);
 	}
+
+	public static double extracted(double area1, double area2) {
+		double diferencia = area1 -area2;
+		System.out.println("Diferencia areas: " +diferencia);
+		return diferencia;
+	}
+
+	
+
+	
 
 }
